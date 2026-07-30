@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f55c25daa461f82e",
+        "id": "1df83f414b62d361",
         "type": "tabs",
         "children": [
           {
-            "id": "5f8ee2df1f7c8465",
+            "id": "b03a4ba976320571",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:Unsupervised",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "11e3b38797f60e8f",
@@ -185,15 +184,21 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "5f8ee2df1f7c8465",
+  "active": "b03a4ba976320571",
   "lastOpenFiles": [
+    "2026-07-30.md",
+    "Deep_Learning/05_DNN_Issues_and_Optimizers.md.md",
+    "무제.canvas",
+    "Deep_Learning/08_Pooling and Classification Head.md",
+    "Deep_Learning/07_Convolution Layer and Hyperparameters.md",
+    "Deep_Learning/06_CNN Basics and Architecture.md",
+    "Deep_Learning/06_fsdf.md",
     "Deep_Learning/04_Backpropagation_and_ChainRule.md.md",
     "Deep_Learning/03_Loss_Function_and_Softmax.md.md",
     "Deep_Learning/02_MLP_and_Activation_Functions.md.md",
+    "Model_Evaluation/Model_Evaluation_Summary.md",
     "Deep_Learning/01_Introduction_and_Perceptron.md.md",
     "Machine_Learning/01_Machine_Learning_Introduction.md.md",
-    "Model_Evaluation/Model_Evaluation_Summary.md",
-    "Deep_Learning/05_DNN_Issues_and_Optimizers.md.md",
     "Machine_Learning/02_Linear_Regression_and_Gradient_Descent.md.md",
     "Machine_Learning/03_Data_Preprocessing_and_Validation.md.md",
     "Machine_Learning/04_Regularization_Ridge_Lasso.md.md",
@@ -207,17 +212,11 @@
     "Data-Science/pandas_library/01_pandas_series_and_dataframe.md.md",
     "Data-Science/numpy_library/02_numpy_core_functions_and_operations.md.md",
     "Data-Science/numpy_library/01_linear_algebra_basics.md.md",
-    "Data-Science/data_and_analysis_process/03_data_preprocessing_and_eda.md.md",
-    "Data-Science/data_and_analysis_process/02_data_analysis_overview_and_types.md.md",
-    "Data-Science/data_and_analysis_process/01_understanding_and_types_of_data.md.md",
-    "Data-Science/theory_and_job_overview/02_data_science_job_preview.md.md",
-    "Data-Science/theory_and_job_overview/01_what_is_data_science.md.md",
     "Data-Science/Visualization/무제",
     "Data-Science/pandas_library",
     "Data-Science/Visualization",
     "Data-Science",
     "Data-Science/numpy_library",
-    "numpy_library.md",
     "Data-Science/data_and_analysis_process",
     "Data-Science/theory_and_job_overview",
     "Model_Evaluation",

@@ -1,6 +1,13 @@
 ---
 date: 2026-07-29
-tag: [DeepLearning, VanishingGradient, Initialization, Dropout, Optimizer, PyTorch, Insight]
+tag:
+  - DeepLearning
+  - VanishingGradient
+  - Initialization
+  - Dropout
+  - Optimizer
+  - PyTorch
+  - Insight
 status: complete
 ---
 
