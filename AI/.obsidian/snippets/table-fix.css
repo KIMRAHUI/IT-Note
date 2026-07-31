@@ -1,0 +1,49 @@
+/* ===== 표 반응형 + 가독성 개선 스니펫 (수정판) ===== */
+
+.markdown-preview-view table,
+.markdown-source-view table,
+.markdown-rendered table {
+  table-layout: auto;        /* fixed → auto: 내용 크기 기반으로 컬럼 폭 자동 계산 */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.markdown-preview-view table td,
+.markdown-preview-view table th,
+.markdown-source-view table td,
+.markdown-source-view table th,
+.markdown-rendered table td,
+.markdown-rendered table th {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  padding: 0.5rem 0.625rem;
+  line-height: 1.5;
+  hyphens: none;
+}
+
+/* 첫 번째 컬럼(항목명): 절대 줄바꿈 안 되게 강제 */
+.markdown-preview-view table th:first-child,
+.markdown-preview-view table td:first-child,
+.markdown-source-view table th:first-child,
+.markdown-source-view table td:first-child,
+.markdown-rendered table th:first-child,
+.markdown-rendered table td:first-child {
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+}
+
+/* 표가 좁은 화면에서 깨지지 않도록 가로 스크롤 허용 */
+.markdown-preview-view table,
+.markdown-source-view table,
+.markdown-rendered table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.markdown-preview-view table,
+.markdown-rendered table {
+  font-size: 0.9rem;
+}
