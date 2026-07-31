@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Deep_Learning/05_DNN_Issues_and_Optimizers.md.md",
+                "file": "Deep_Learning/11_AutoEncoder Implementations and Applications.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05_DNN_Issues_and_Optimizers.md"
+              "title": "11_AutoEncoder Implementations and Applications"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "파일 탐색기"
@@ -112,6 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Deep_Learning/09_AutoEncoder Representation and Dimensionality.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,12 +164,23 @@
               "icon": "lucide-list",
               "title": "개요"
             }
+          },
+          {
+            "id": "d3f51244a789bdaa",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 295.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -186,18 +200,21 @@
   },
   "active": "b03a4ba976320571",
   "lastOpenFiles": [
+    "Deep_Learning/10_Latent Space Properties and AutoEncoder Architecture.md",
+    "Deep_Learning/08_Pooling and Classification Head.md",
+    "Deep_Learning/09_AutoEncoder Representation and Dimensionality.md",
     "2026-07-30.md",
+    "Deep_Learning/11_AutoEncoder Implementations and Applications.md",
+    "Deep_Learning/06_CNN Basics and Architecture.md",
+    "Deep_Learning/07_Convolution Layer and Hyperparameters.md",
+    "Deep_Learning/01_Introduction_and_Perceptron.md.md",
+    "Deep_Learning/02_MLP_and_Activation_Functions.md.md",
+    "Deep_Learning/03_Loss_Function_and_Softmax.md.md",
+    "Deep_Learning/04_Backpropagation_and_ChainRule.md.md",
     "Deep_Learning/05_DNN_Issues_and_Optimizers.md.md",
     "무제.canvas",
-    "Deep_Learning/08_Pooling and Classification Head.md",
-    "Deep_Learning/07_Convolution Layer and Hyperparameters.md",
-    "Deep_Learning/06_CNN Basics and Architecture.md",
     "Deep_Learning/06_fsdf.md",
-    "Deep_Learning/04_Backpropagation_and_ChainRule.md.md",
-    "Deep_Learning/03_Loss_Function_and_Softmax.md.md",
-    "Deep_Learning/02_MLP_and_Activation_Functions.md.md",
     "Model_Evaluation/Model_Evaluation_Summary.md",
-    "Deep_Learning/01_Introduction_and_Perceptron.md.md",
     "Machine_Learning/01_Machine_Learning_Introduction.md.md",
     "Machine_Learning/02_Linear_Regression_and_Gradient_Descent.md.md",
     "Machine_Learning/03_Data_Preprocessing_and_Validation.md.md",
@@ -210,8 +227,6 @@
     "Data-Science/Visualization/matplotlib_basics.md.md",
     "Data-Science/pandas_library/02_data_manipulation_and_aggregation.md.md",
     "Data-Science/pandas_library/01_pandas_series_and_dataframe.md.md",
-    "Data-Science/numpy_library/02_numpy_core_functions_and_operations.md.md",
-    "Data-Science/numpy_library/01_linear_algebra_basics.md.md",
     "Data-Science/Visualization/무제",
     "Data-Science/pandas_library",
     "Data-Science/Visualization",

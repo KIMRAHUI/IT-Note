@@ -1,6 +1,5 @@
 ---
 tags:
-  - Machine_Learning
   - Deep_Learning
   - CNN
 created: 2026-07-30
