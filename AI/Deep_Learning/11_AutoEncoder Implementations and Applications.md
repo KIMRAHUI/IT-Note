@@ -117,7 +117,7 @@ Denoising AutoEncoder는 의도적으로 입력 데이터에 노이즈를 추가
     
 - **목표 출력 (Target):** 노이즈가 없는 깨끗한 원본 $x$  
     
-- **손실 함수:** $\mathcal{L}_{\text{DAE}} = \Vert x - f_\theta(g_\phi(p)) \Vert^2$  
+- **손실 함수:** `L_DAE = || x - f_theta(g_phi(p)) ||^2`
     
 
 ```
