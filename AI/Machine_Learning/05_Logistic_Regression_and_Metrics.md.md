@@ -7,7 +7,7 @@ created: 2026-07-29
 ---
 
 #### 개요
-선형 방정식의 결과를 $0 \sim 1$ 사이의 확률값으로 변환하여 이진 및 다중 분류를 수행하는 **로지스틱 회귀(Logistic Regression)**의 수학적 구조와 로그 손실 함수(Binary Cross-Entropy), 그리고 분류 모델의 성능을 객관적으로 정밀 평가하기 위한 **오차 행렬(Confusion Matrix) 및 평가 지표(Accuracy, Precision, Recall, F1 Score)**를 다룹니다.
+선형 방정식의 결과를 $0 \sim 1$ 사이의 확률값으로 변환하여 이진 및 다중 분류를 수행하는 로지스틱 회귀(Logistic Regression)의 수학적 구조와 로그 손실 함수(Binary Cross-Entropy), 그리고 분류 모델의 성능을 객관적으로 정밀 평가하기 위한 **오차 행렬(Confusion Matrix) 및 평가 지표(Accuracy, Precision, Recall, F1 Score)**를 다룹니다.
 
 ---
 
