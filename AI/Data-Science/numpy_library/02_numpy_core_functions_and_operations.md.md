@@ -7,7 +7,7 @@ created: 2026-07-29
 ---
 
 #### 개요
-**NumPy(Numeric Python)**는 파이썬 생태계에서 고성능 수치 연산과 다차원 배열(ndarray) 처리를 담당하는 핵심 데이터 과학 라이브러리입니다. C 언어로 구현되어 있어 대용량 데이터의 연산 속도가 매우 빠르며, Pandas, Scikit-learn, TensorFlow 등 주요 머신러닝/딥러닝 프레임워크의 기반 구조로 사용됩니다.
+NumPy(Numeric Python)는 파이썬 생태계에서 고성능 수치 연산과 다차원 배열(ndarray) 처리를 담당하는 핵심 데이터 과학 라이브러리입니다. C 언어로 구현되어 있어 대용량 데이터의 연산 속도가 매우 빠르며, Pandas, Scikit-learn, TensorFlow 등 주요 머신러닝/딥러닝 프레임워크의 기반 구조로 사용됩니다.
 
 ---
 
