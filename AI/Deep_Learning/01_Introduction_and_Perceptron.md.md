@@ -61,7 +61,7 @@ $$W_{t+1} \leftarrow W_t - \alpha \cdot \text{Gradient}$$
 > 
 > 동일한 데이터를 충족시키는 모델 형태는 무수히 많을 수 있습니다 (예: $y = 10x$ 외에도 $y = x^3 - 6x^2 + 21x - 6$ 등).
 > 
-> 즉, **"사람이 Hypothesis(가설)의 폼을 결정하고, 기계가 Weight를 결정하는 것"**이 머신러닝의 핵심입니다.
+> 즉, "사람이 Hypothesis(가설)의 폼을 결정하고, 기계가 Weight를 결정하는 것"이 머신러닝의 핵심입니다.
 
 #### 머신러닝의 주요 학습 분야
 
@@ -168,12 +168,10 @@ print("AND(0, 0) ->", perceptron_AND(0, 0))
 print("AND(1, 1) ->", perceptron_AND(1, 1))
 ```
 
-####공식 문서 및 참고 링크
+#### 공식 문서 및 참고 링크
 
--  [Scikit-learn Official Guide - Supervised & Unsupervised Learning Overview](https://scikit-learn.org/stable/user_guide.html)
-    
--  [Stanford CS231n - Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/)
-    
--  [Google Machine Learning Crash Course - ML Concepts](https://developers.google.com/machine-learning/crash-course)
+- [Scikit-learn Official Guide - Supervised & Unsupervised Learning Overview](https://scikit-learn.org/stable/user_guide.html)
+- [Stanford CS231n - Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/)
+- [Google Machine Learning Crash Course - ML Concepts](https://developers.google.com/machine-learning/crash-course)
     
 -  [freeCodeCamp - Chihuahua or Muffin? 이미지 분류 문제로 보는 머신러닝](https://www.freecodecamp.org/news/tag/machine-learning/)
