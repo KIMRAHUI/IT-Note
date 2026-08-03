@@ -53,7 +53,7 @@ $$\text{Output Size} = \left\lfloor \frac{H - K + 2P}{S} \right\rfloor + 1$$
 - $\lfloor \dots \rfloor$: 버림(Floor) 연산. 격자 연산 특성상 불완전하게 걸치는 마지막 위치는 버림 처리됩니다.
     
 
-> [!note] 계산 예제 풀이
+>**[Note] 계산 예제 풀이**
 > 
 > **예제 1:** 입력 $128 \times 128 \times 30$, 커널 $5 \times 5$, Stride = 2, Padding = 2
 > 
@@ -78,7 +78,7 @@ $$\text{Output Size} = \left\lfloor \frac{H - K + 2P}{S} \right\rfloor + 1$$
 
 $$\text{Total Params} = \Big( (K_H \times K_W \times C_{in}) + 1 \Big) \times C_{out}$$
 
-> [!note] 파라미터 계산 예시
+> **[Note] 파라미터 계산 예시**
 > 
 > 입력이 $224 \times 224 \times 3$ 이고, $3 \times 3$ 커널을 가진 필터 2개를 적용하는 경우:
 > 

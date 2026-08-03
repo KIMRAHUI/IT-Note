@@ -10,7 +10,7 @@ created: 2026-07-29
 ---
 
 #### 개요
-단일 모델의 한계를 극복하기 위해 여러 개의 **약한 학습기(Weak Learner)**를 결합하여 더 강력하고 안정적인 최종 예측을 도출하는 **앙상블 학습(Ensemble Learning)**의 전체 체계와, **Random Forest**, **AdaBoost**, **GBM**, **XGBoost**, **LightGBM**의 핵심 알고리즘 메커니즘을 다룹니다.
+단일 모델의 한계를 극복하기 위해 여러 개의 약한 학습기(Weak Learner)를 결합하여 더 강력하고 안정적인 최종 예측을 도출하는 앙상블 학습(Ensemble Learning)의 전체 체계와, **Random Forest**, **AdaBoost**, **GBM**, **XGBoost**, **LightGBM**의 핵심 알고리즘 메커니즘을 다룹니다.
 
 ---
 
@@ -62,7 +62,7 @@ created: 2026-07-29
 * **최종 예측:** 각 스텀프의 성능(오차율 기반)에 따라 비중을 다르게 부여하여 가중 합산합니다.
 
 ##### ② GBM (Gradient Boosting Model)
-* **원리:** AdaBoost처럼 오답 가중치를 조정하는 대신, 실제값과 현재 모델 예측값의 차이인 **잔차(Residual / Negative Gradient)**를 다음 트리가 학습하도록 경사하강법(Gradient Descent)을 적용합니다.
+* **원리:** AdaBoost처럼 오답 가중치를 조정하는 대신, 실제값과 현재 모델 예측값의 차이인 잔차(Residual / Negative Gradient)를 다음 트리가 학습하도록 경사하강법(Gradient Descent)을 적용합니다.
 * **단점:** 순차적 계산으로 인한 과적합(Overfitting) 위험이 있고, 대용량 데이터 학습 속도가 느립니다.
 
 ---

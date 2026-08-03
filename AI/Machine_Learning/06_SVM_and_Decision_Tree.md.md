@@ -7,23 +7,21 @@ created: 2026-07-29
 ---
 
 #### 개요
-판별적(Non-probabilistic) 선형 분류 알고리즘으로 마진(Margin)을 최대화하는 **Linear Support Vector Machine (Linear SVM)**과, 데이터를 계층적으로 분할하여 규칙을 생성하는 **결정 트리(Decision Tree)**의 수학적 불순도 지표(Gini, Information Gain) 및 학습 원리를 정리합니다.
+판별적(Non-probabilistic) 선형 분류 알고리즘으로 마진(Margin)을 최대화하는 Linear Support Vector Machine (Linear SVM)과, 데이터를 계층적으로 분할하여 규칙을 생성하는 결정 트리(Decision Tree)의 수학적 불순도 지표(Gini, Information Gain) 및 학습 원리를 정리합니다.
 
 ---
 
 #### Linear Support Vector Machine (Linear SVM)
 
-* **정의:** 확률값이 아닌 카테고리를 직관적으로 구분짓는 **선형 결정 경계(Decision Boundary)**를 찾는 판별(Non-probabilistic) 모델입니다.
+* **정의:** 확률값이 아닌 카테고리를 직관적으로 구분짓는 선형 결정 경계(Decision Boundary)를 찾는 판별(Non-probabilistic) 모델입니다.
 * **핵심 개념:**
   * **마진 (Margin):** 결정 경계선과 각 클래스별 가장 가까운 데이터 샘플 사이의 폭(거리)을 의미합니다.
   * **서포트 벡터 (Support Vector):** 마진의 경계선(Hyperplane)에 접해 있으면서 마진의 크기를 결정하는 기준이 되는 최외곽 훈련 데이터 포인트들입니다.
 * **마진 최대화 전략:**
   * 데이터 구분 정확도를 확보함과 동시에 마진을 최대한 넓혀(마진 최대화) 새로운 데이터에 대한 일반화 성능을 올립니다.
 * **손실 함수 (Hinge Loss):**
-  * 결정 경계 바깥쪽에 정상적으로 배치된 샘플의 오차는 $0$으로 처리하고, 마진 내부나 반대편으로 침범한 오차 샘플에 대해서만 선형적으로 패널티를 부여하는 Hinge Loss를 사용합니다.
-  $$\text{Cost}(h_\theta(x), y) = \begin{cases} \max(0, 1 - \theta^T x) & \text{if } y = 1 \\ \max(0, 1 + \theta^T x) & \text{if } y = 0 \end{cases}$$
-
-
+  * 결정 경계 바깥쪽에 정상적으로 배치된 샘플의 오차는 0으로 처리하고, 마진 내부나 반대편으로 침범한 오차 샘플에 대해서만 선형적으로 패널티를 부여하는 Hinge Loss를 사용합니다.
+  * **수식 형태:** `Cost(h_theta(x), y) = max(0, 1 - y * (theta^T x))` (또는 조건별 분할식 구조)
 ---
 
 #### 결정 트리 (Decision Tree) 및 불순도 지표

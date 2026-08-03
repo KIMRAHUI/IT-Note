@@ -8,7 +8,7 @@ created: 2026-07-29
 ---
 
 #### 개요
-수치형 연속 데이터를 예측하는 대표적인 지도학습 모델인 **선형 회귀(Linear Regression)**의 가설 함수(Hypothesis)부터, 모델의 오차를 측정하는 **손실 함수(Cost Function / MSE)**의 수학적 원리, 그리고 손실을 최소화하는 최적의 가중치를 탐색하는 **경사하강법(Gradient Descent)** 알고리즘을 상세히 정리합니다.
+수치형 연속 데이터를 예측하는 대표적인 지도학습 모델인 선형 회귀(Linear Regression)의 가설 함수(Hypothesis)부터, 모델의 오차를 측정하는 손실 함수(Cost Function / MSE)의 수학적 원리, 그리고 손실을 최소화하는 최적의 가중치를 탐색하는 **경사하강법(Gradient Descent)** 알고리즘을 상세히 정리합니다.
 
 ---
 
