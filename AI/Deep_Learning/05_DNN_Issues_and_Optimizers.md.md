@@ -25,11 +25,9 @@ status: complete
         
     - 역전파(Backpropagation) 과정에서 체인룰(Chain Rule)에 의해 $0 \sim 0.25$ 사이의 미분값이 층마다 지속적으로 곱해지며, 입력층에 가까워질수록 기울기(Gradient)가 $0$으로 수렴(소실)되어 가중치 학습이 진행되지 않습니다.
         
-- **해결책 1: ReLU 활성화 함수 사용**
-    
-    - 양수 구간($z \ge 0$)에서 미분값이 항상 $1$로 유지되어 깊은 층에서도 기울기 소멸을 방지합니다.
-        
-        $$\text{ReLU}(z) = \max(0, z), \quad \text{ReLU}'(z) = \begin{cases} 1, & z \ge 0 \\ 0, & z < 0 \end{cases}$$
+* **해결책 1: ReLU 활성화 함수 사용**
+  * 양수 구간($z \ge 0$)에서 미분값이 항상 $1$로 유지되어 깊은 층에서도 기울기 소멸을 방지합니다.
+  * $\text{ReLU}(z) = \max(0, z), \quad \text{ReLU}'(z) = 1 \; (z \ge 0) \text{ or } 0 \; (z < 0)$
         
 - **해결책 2: 정밀한 가중치 초기화 (Weight Initialization)**
     
@@ -79,7 +77,7 @@ $$W_{t+1} = W(t) + V(t)$$
 - $m$: 관성 계수 (Momentum coefficient, 보통 $0.9$ 사용)
     
 
-> [!note] 수식 해석 및 풀이
+> **[Note] 수식 해석 및 풀이**
 > 
 > 이전 이동 방향이었던 속도 벡터 $V(t-1)$에 관성 계수 $m$을 곱해 이전 가속도를 유지한 채, 현재 지점의 기울기 감소 방향 $-\alpha \nabla W$를 더해줍니다.
 > 
