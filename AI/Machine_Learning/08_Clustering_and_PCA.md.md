@@ -8,7 +8,7 @@ created: 2026-07-29
 ---
 
 #### 개요
-비지도학습(Unsupervised Learning)의 대표적인 분야인 데이터를 그룹화하는 **K-Means Clustering**과, 데이터의 정보 손실을 최소화하면서 차원의 저주를 해결하는 **주성분 분석(PCA, Principal Component Analysis)**의 수학적 원리 및 핵심 알고리즘을 정리합니다.
+비지도학습(Unsupervised Learning)의 대표적인 분야인 데이터를 그룹화하는 **K-Means Clustering**과, 데이터의 정보 손실을 최소화하면서 차원의 저주를 해결하는 주성분 분석(PCA, Principal Component Analysis)의 수학적 원리 및 핵심 알고리즘을 정리합니다.
 
 ---
 
@@ -41,7 +41,7 @@ created: 2026-07-29
 * **작동 방식 및 단계별 알고리즘:**
   1. **데이터 표준화 (Standardization):** 변수 간 스케일 차이에 의한 왜곡을 방지하기 위해 데이터를 평균 0, 분산 1로 표준화합니다.
   2. **공분산 행렬 (Covariance Matrix) 계산:** 변수 간 분산과 상관관계를 담고 있는 공분산 행렬을 계산합니다.
-  3. **고유값 분해 (Eigenvalue Decomposition):** 공분산 행렬을 고유값 분해하여 데이터 분산의 방향을 나타내는 **고유벡터(Eigenvector)**와 분산의 크기를 나타내는 **고유값(Eigenvalue)**을 산출합니다.
+  3. **고유값 분해 (Eigenvalue Decomposition):** 공분산 행렬을 고유값 분해하여 데이터 분산의 방향을 나타내는 고유벡터(Eigenvector)와 분산의 크기를 나타내는 고유값(Eigenvalue)을 산출합니다.
   
      $$A = V \Lambda V^{-1}$$
 
