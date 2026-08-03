@@ -57,7 +57,7 @@ $$\text{입력 } (x) \xrightarrow{\text{인코더 } g_\phi} \text{압축된 표�
 
 > [!TIP] 오토인코더(AE) vs 가우시안 규제 오토인코더(VAE)
 > 
-> 일반 오토인코더(Vanilla AE)는 잠재 공간에 규제가 없어 구멍(Hole)이 생기기 쉬우며 완전성이 깨지기 쉽습니다. 이를 보완하기 위해 잠재 공간이 표준정규분포를 따르도록 강제하는 규제항(KL Divergence)을 추가한 모델이 **VAE (Variational Autoencoder)**입니다.
+> 일반 오토인코더(Vanilla AE)는 잠재 공간에 규제가 없어 구멍(Hole)이 생기기 쉬우며 완전성이 깨지기 쉽습니다. 이를 보완하기 위해 잠재 공간이 표준정규분포를 따르도록 강제하는 규제항(KL Divergence)을 추가한 모델이 VAE (Variational Autoencoder)입니다.
 
 #### AutoEncoder의 정의 및 Encoder-Decoder 구조
 
