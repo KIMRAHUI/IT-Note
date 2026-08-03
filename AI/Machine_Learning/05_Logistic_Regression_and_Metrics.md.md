@@ -28,7 +28,7 @@ created: 2026-07-29
 
 * **손실 함수 (Binary Cross-Entropy / Log Loss):**
   * 분류 문제에서 평균 제곱 오차(MSE)를 사용할 경우, 손실 함수 형태가 **비볼록(Non-convex)** 구조가 되어 경사하강법으로 글로벌 최솟값(Global Minimum)을 찾기 어렵습니다.
-  * 따라서 볼록(Convex) 형태로 최적화가 용이한 **로그 손실 함수(Binary Cross-Entropy)**를 사용합니다.
+  * 따라서 볼록(Convex) 형태로 최적화가 용이한 로그 손실 함수(Binary Cross-Entropy)를 사용합니다.
   $$J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} \log(h_\theta(x^{(i)})) + (1 - y^{(i)}) \log(1 - h_\theta(x^{(i)})) \right]$$
 
 * **다중 분류(Multi-class)로의 확장:**
