@@ -62,7 +62,7 @@ created: 2026-07-29
 * **최종 예측:** 각 스텀프의 성능(오차율 기반)에 따라 비중을 다르게 부여하여 가중 합산합니다.
 
 ##### ② GBM (Gradient Boosting Model)
-* **원리:** AdaBoost처럼 오답 가중치를 조정하는 대신, 실제값과 현재 모델 예측값의 차이인 **잔차(Residual / Negative Gradient)**를 다음 트리가 학습하도록 경사하강법(Gradient Descent)을 적용합니다.
+* **원리:** AdaBoost처럼 오답 가중치를 조정하는 대신, 실제값과 현재 모델 예측값의 차이인 잔차(Residual / Negative Gradient)를 다음 트리가 학습하도록 경사하강법(Gradient Descent)을 적용합니다.
 * **단점:** 순차적 계산으로 인한 과적합(Overfitting) 위험이 있고, 대용량 데이터 학습 속도가 느립니다.
 
 ---
