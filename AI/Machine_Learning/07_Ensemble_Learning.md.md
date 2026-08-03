@@ -10,7 +10,7 @@ created: 2026-07-29
 ---
 
 #### 개요
-단일 모델의 한계를 극복하기 위해 여러 개의 **약한 학습기(Weak Learner)**를 결합하여 더 강력하고 안정적인 최종 예측을 도출하는 **앙상블 학습(Ensemble Learning)**의 전체 체계와, **Random Forest**, **AdaBoost**, **GBM**, **XGBoost**, **LightGBM**의 핵심 알고리즘 메커니즘을 다룹니다.
+단일 모델의 한계를 극복하기 위해 여러 개의 **약한 학습기(Weak Learner)**를 결합하여 더 강력하고 안정적인 최종 예측을 도출하는 앙상블 학습(Ensemble Learning)의 전체 체계와, **Random Forest**, **AdaBoost**, **GBM**, **XGBoost**, **LightGBM**의 핵심 알고리즘 메커니즘을 다룹니다.
 
 ---
 
