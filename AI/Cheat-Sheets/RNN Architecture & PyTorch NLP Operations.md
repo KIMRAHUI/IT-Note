@@ -43,14 +43,31 @@ status: complete
 
 #### RNN 및 순차 모델 파라미터 요약
 
-| 분류 | 용어 (Term) | 상세 설명 |
+| 분류 용어 (Term) | 상세 설명 |
+| :--- | :--- |
+| **input_size** | 입력 데이터의 피처(Feature) 차원 크기입니다. (예: 임베딩 벡터 차원 수) |
+| **hidden_size** | 은닉 상태($h_t$) 및 셀 상태($C_t$)의 벡터 차원 크기입니다. (모델의 기억 용량) |
+| **num_layers** | RNN/LSTM/GRU 셀을 위로 몇 층(Multi-layer)으로 쌓을지 지정합니다. |
+| **batch_first** | 입력 텐서의 차원 순서를 `(batch, seq, feature)`로 설정할지 여부입니다. (True 권장) |
+| **bidirectional** | 양방향(Bidirectional) RNN 설정 여부입니다. (True 설정 시 정방향 + 역방향 학습) |
+| **dropout** | 여러 층의 RNN 레이어 사이에 적용할 드롭아웃 확률값입니다. (과적합 방지) |
+
+---
+
+#### PyTorch 텐서 기초 및 속성 치트시트
+
+| 분류 | 속성 / 메서드 (Method) | 설명 및 코드 활용 |
 | :--- | :--- | :--- |
-| **입력 / 출력 크기** | `input_size` | 입력 데이터의 피처(Feature) 차원 크기입니다. (예: 임베딩 벡터 차원 수) |
-| | `hidden_size` | 은닉 상태($h_t$) 및 셀 상태($C_t$)의 벡터 차원 크기입니다. (모델의 기억 용량) |
-| | `num_layers` | RNN/LSTM/GRU 셀을 위로 몇 층(Multi-layer)으로 쌓을지 지정합니다. |
-| **구조 옵션** | `batch_first` | 입력 텐서의 차원 순서를 `(batch, seq, feature)`로 설정할지 여부입니다. (`True` 권장) |
-| | `bidirectional` | 양방향(Bidirectional) RNN 설정 여부입니다. (`True` 설정 시 정방향 + 역방향 학습) |
-| | `dropout` | 여러 층의 RNN 레이어 사이에 적용할 드롭아웃 확률값입니다. (과적합 방지) |
+| **텐서 형태 및 속성** | `.shape` / `.size()` | 텐서의 차원 구조를 확인합니다. |
+| | `.dtype` | 텐서의 데이터 타입(`torch.float32`, `torch.int64` 등)을 확인합니다. |
+| | `.device` | 텐서가 위치한 장치(`cpu` 또는 `cuda:0`)를 확인합니다. |
+| **특수 텐서 생성** | `torch.rand()` / `torch.randn()` | 균등 분포 및 정규 분포를 따르는 난수 텐서를 생성합니다. |
+| | `torch.zeros()` / `torch.ones()` | 모든 값이 0 또는 1로 채워진 텐서를 생성합니다. |
+| **디바이스 관리** | `.to('cuda')` / `.cuda()` | 텐서를 CPU에서 GPU(또는 반대)로 이동시킵니다. (장치 불일치 에러 방지) |
+| **타입 및 연동** | `.type(torch.float32)` | 텐서의 데이터 타입을 변환합니다. |
+| | `.numpy()` / `torch.from_numpy()` | PyTorch 텐서와 NumPy 배열 상호 변환 (메모리 공유 주의) |
+| **연산 및 브로드캐스팅** | `torch.matmul()` / `*` | 행렬 곱셈 및 요소별(Element-wise) 연산을 수행합니다. |
+| | **Broadcasting** | 크기가 다른 텐서 간의 연산 시 작은 텐서를 자동으로 확장하여 연산합니다. |
 
 ---
 
@@ -62,8 +79,8 @@ status: complete
 | | `nn.LSTM()` | Cell State 및 Gate 구조가 포함된 LSTM 레이어를 생성합니다. |
 | | `nn.GRU()` | 연산량이 적고 구조가 간소화된 GRU 레이어를 생성합니다. |
 | **출력 및 상태값** | `output` | 모든 시점(Time Step)의 은닉 상태값들을 모아놓은 텐서입니다. |
-| | `hn` (Hidden State) | 가장 마지막 시점(Last Time Step)의 은닉 상태 벡터입니다. |
-| | `cn` (Cell State) | LSTM에서만 반환되며, 가장 마지막 시점의 셀 상태 벡터입니다. |
+| | `hn (Hidden State)` | 가장 마지막 시점(Last Time Step)의 은닉 상태 벡터입니다. |
+| | `cn (Cell State)` | LSTM에서만 반환되며, 가장 마지막 시점의 셀 상태 벡터입니다. |
 | **초기화 메서드** | `torch.zeros()` | 첫 번째 시점($t=0$)에 주입할 초기 은닉 상태($h_0$) 및 셀 상태($c_0$)를 0으로 초기화할 때 사용합니다. |
 
 ---
@@ -74,7 +91,7 @@ status: complete
 | :--- | :--- | :--- |
 | **단어 임베딩** | `nn.Embedding(num_embeddings, embedding_dim)` | 단어 사전 크기(`num_embeddings`)와 임베딩 차원(`embedding_dim`)을 받아 임베딩 레이어를 생성합니다. |
 | | `.weight` | 임베딩 레이어 내부의 학습 가능한 가중치 행렬에 접근합니다. |
-| **패딩 처리** | `pad_sequence()` | 길이가 다른 가변 시퀀스 데이터를 동일한 길이로 맞추기 위해 패딩(`0`)을 추가합니다. |
+| **패딩 처리** | `pad_sequence()` | 길이가 다른 가변 시퀀스 데이터를 동일한 길이로 맞추기 위해 패딩(0)을 추가합니다. |
 | | `pack_padded_sequence()` | 패딩 처리된 입력 중 실제 데이터 부분만 효율적으로 계산하도록 묶어주는 메서드입니다. (연산 속도 개선) |
 | | `pad_packed_sequence()` | `pack_padded_sequence` 처리된 결과를 다시 일반 패딩 텐서 형태로 복원합니다. |
 
@@ -82,8 +99,9 @@ status: complete
 
 #### 참고 공식 문서 및 학습 자료
 
-* [PyTorch Official Documentation - `torch.nn.RNN`](https://pytorch.org/docs/stable/generated/torch.nn.RNN.html)
-* [PyTorch Official Documentation - `torch.nn.LSTM`](https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html)
-* [PyTorch Official Documentation - `torch.nn.Embedding`](https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html)
-* [CS231n: Recurrent Neural Networks & Natural Language Processing](https://cs231n.github.io/rnn/)
-* [Understanding LSTM Networks (Chris Olah's Blog)](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+* [PyTorch Official Documentation - torch.nn.RNN](https://pytorch.org/docs/stable/generated/torch.nn.RNN.html)
+* [PyTorch Official Documentation - torch.nn.LSTM](https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html)
+* [PyTorch Official Documentation - torch.nn.Embedding](https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html)
+* [PyTorch Official Documentation - torch.Tensor](https://pytorch.org/docs/stable/tensors.html)
+* [CS231n: Recurrent Neural Networks & Natural Language Processing](http://cs231n.stanford.edu/)
+* [Understanding LSTM Networks (Chris Olah's Blog)](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)

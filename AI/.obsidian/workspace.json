@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pytorch_Tensor/01_PyTorch Tensor Manipulation and Operations Deep Dive.md",
+                "file": "Cheat-Sheets/Deep Learning Hyperparameters & PyTorch Tensors.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_PyTorch Tensor Manipulation and Operations Deep Dive"
+              "title": "Deep Learning Hyperparameters & PyTorch Tensors"
             }
           }
         ]
@@ -76,8 +76,7 @@
               "title": "북마크"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -201,8 +200,10 @@
   },
   "active": "b03a4ba976320571",
   "lastOpenFiles": [
-    "Deep_Learning/15_NLP_Fundamentals_and_Word_Embedding.md",
+    "Cheat-Sheets/RNN Architecture & PyTorch NLP Operations.md",
+    "Cheat-Sheets/Deep Learning Hyperparameters & PyTorch Tensors.md",
     "Pytorch_Tensor/01_PyTorch Tensor Manipulation and Operations Deep Dive.md",
+    "Deep_Learning/15_NLP_Fundamentals_and_Word_Embedding.md",
     "Pytorch_Tensor",
     "Deep_Learning/14_LSTM_and_GRU_Architecture.md",
     "Deep_Learning/13_RNN_Backpropagation_BPTT_and_Challenges.md",
@@ -218,9 +219,7 @@
     "Deep_Learning/03_Loss_Function_and_Softmax.md",
     "Deep_Learning/02_MLP_and_Activation_Functions.md",
     "Deep_Learning/01_Introduction_and_Perceptron.md",
-    "Cheat-Sheets/Deep Learning Hyperparameters & PyTorch Tensors.md",
     "Cheat-Sheets/Model_Evaluation_Summary.md",
-    "Cheat-Sheets/RNN Architecture & PyTorch NLP Operations.md",
     "무제.base",
     "2026-07-29.md",
     "2026-07-30.md",
