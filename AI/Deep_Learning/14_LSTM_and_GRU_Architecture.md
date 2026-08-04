@@ -11,14 +11,14 @@ created: 2026-08-03
 ---
 
 #### 개요
-본 문서는 바닐라 RNN(Vanilla RNN)의 치명적인 한계점인 **기울기 소실(Vanishing Gradient)과 장기 의존성(Long-term Dependency)** 문제를 극복하기 위해 제안된 고급 순차 모델인 **LSTM (Long Short-Term Memory)과 이를 더욱 경량화·간소화한 GRU (Gated Recurrent Unit)의 아키텍처 원리, 상세 수식, 그리고 두 모델 간의 비교를 심층적으로 다룹니다.
+본 문서는 바닐라 RNN(Vanilla RNN)의 치명적인 한계점인 **기울기 소실(Vanishing Gradient)과 장기 의존성(Long-term Dependency)** 문제를 극복하기 위해 제안된 고급 순차 모델인 LSTM (Long Short-Term Memory)과 이를 더욱 경량화·간소화한 GRU (Gated Recurrent Unit)의 아키텍처 원리, 상세 수식, 그리고 두 모델 간의 비교를 심층적으로 다룹니다.
 
 ---
 
 #### LSTM (Long Short-Term Memory)
 
 ##### 개념 및 구조적 특징
-* **개념**: RNN의 단일 은닉 상태 통로 구조에 장기 기억을 전담하는 **Cell State ($C_t$)**를 추가하고, 3개의 게이트(Gate)를 도입하여 정보의 흐름을 선택적으로 제어하는 구조입니다.
+* **개념**: RNN의 단일 은닉 상태 통로 구조에 장기 기억을 전담하는 Cell State ($C_t$)를 추가하고, 3개의 게이트(Gate)를 도입하여 정보의 흐름을 선택적으로 제어하는 구조입니다.
 * **핵심 통로**:
   * **Cell State ($C_t$)**: 마치 컨베이어 벨트처럼 네트워크 전체를 관통하며 장기 기억을 운반합니다 (덧셈 위주의 연산이 주로 이루어져 역전파 시 기울기 소실 문제를 효과적으로 방지).
   * **Hidden State ($h_t$)**: 단기 기억 및 최종 출력을 담당합니다.
@@ -46,8 +46,9 @@ created: 2026-08-03
 ##### ② 입력 게이트 (Input Gate, $i_t, \tilde{C}_t$)
 * **역할**: 현재 입력된 정보 중 어떤 내용을 새로운 장기 기억에 반영할지 결정합니다.
 * **수식**:
-  $$i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)$$
-  $$\tilde{C}_t = \tanh(W_c \cdot [h_{t-1}, x_t] + b_c) \quad (\text{현재 입력에 따른 후보 장기 기억})$$
+$$i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)$$
+
+$$\tilde{C}_t = \tanh(W_c \cdot [h_{t-1}, x_t] + b_c) \quad (\text{현재 입력에 따른 후보 장기 기억})$$
 
 ##### ③ Cell State 갱신
 * **역할**: 과거의 기억($C_{t-1}$) 중 일부를 잊고($f_t \odot C_{t-1}$), 새로운 기억($i_t \odot \tilde{C}_t$)을 더하여 최종 장기 기억($C_t$)을 완성합니다.
@@ -83,18 +84,22 @@ created: 2026-08-03
 ##### ① 리셋 게이트 (Reset Gate, $r_t$)
 * **역할**: 새로운 후보 은닉 상태를 계산할 때, 과거의 기억($h_{t-1}$)을 얼마나 무시하거나 참고할지 결정합니다.
 * **수식**:
+
   $$r_t = \sigma(W_r \cdot [h_{t-1}, x_t] + b_r)$$
 
 ##### ② 업데이트 게이트 (Update Gate, $z_t$)
-* **역할**: LSTM의 Forget Gate와 Input Gate의 역할을 동시에 수행하며, 과거 기억을 유지하는 비율($(1-z_t)$)과 새로운 정보를 반영하는 비율($z_t$)을 시소처럼 동시에 조절합니다.
+* **역할**: LSTM의 Forget Gate와 Input Gate의 역할을 동시에 수행하며, 과거 기억 유지 비율 $1-z_t$ 와 새로운 정보 반영 비율 $z_t$ 를 시소처럼 동시에 조절합니다.
 * **수식**:
+
   $$z_t = \sigma(W_z \cdot [h_{t-1}, x_t] + b_z)$$
 
 ##### ③ 후보 은닉 상태 및 최종 은닉 상태($h_t$) 갱신
 * **후보 은닉 상태 수식**:
-  $$\tilde{h}_t = \tanh(W \cdot [r_t \odot h_{t-1}, x_t] + b)$$
+
+$$\tilde{h}_t = \tanh(W \cdot [r_t \odot h_{t-1}, x_t] + b)$$
+
 * **최종 은닉 상태($h_t$) 수식**:
-  $$h_t = (1 - z_t) \odot h_{t-1} + z_t \odot \tilde{h}_t$$
+$$h_t = (1 - z_t) \odot h_{t-1} + z_t \odot \tilde{h}_t$$
 
 ---
 

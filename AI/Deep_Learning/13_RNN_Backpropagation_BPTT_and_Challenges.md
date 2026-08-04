@@ -11,7 +11,7 @@ created: 2026-08-03
 ---
 
 #### 개요
-본 문서는 순환 신경망(RNN)의 핵심 학습 알고리즘인 **BPTT(Backpropagation Through Time, 시간 역전파)의 수학적 메커니즘과, 바닐라 RNN(Vanilla RNN)이 직면하는 구조적 한계점인 기울기 소실(Vanishing Gradient) 및 장기 의존성(Long-term Dependency) 문제를 심층적으로 다룹니다. 또한 이를 완화하기 위한 기법인 기울기 클리핑(Gradient Clipping)을 정리합니다.
+본 문서는 순환 신경망(RNN)의 핵심 학습 알고리즘인 BPTT(Backpropagation Through Time, 시간 역전파)의 수학적 메커니즘과, 바닐라 RNN(Vanilla RNN)이 직면하는 구조적 한계점인 기울기 소실(Vanishing Gradient) 및 장기 의존성(Long-term Dependency) 문제를 심층적으로 다룹니다. 또한 이를 완화하기 위한 기법인 기울기 클리핑(Gradient Clipping)을 정리합니다.
 
 ---
 
