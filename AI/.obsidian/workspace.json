@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Deep_Learning/15_NLP_Fundamentals_and_Word_Embedding.md",
+                "file": "Pytorch_Tensor/01_PyTorch Tensor Manipulation and Operations Deep Dive.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "15_NLP_Fundamentals_and_Word_Embedding"
+              "title": "01_PyTorch Tensor Manipulation and Operations Deep Dive"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:Unsupervised",
+                "query": "tag:broadcasting",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,12 +76,12 @@
               "title": "북마크"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "11e3b38797f60e8f",
@@ -201,10 +201,12 @@
   },
   "active": "b03a4ba976320571",
   "lastOpenFiles": [
+    "Deep_Learning/15_NLP_Fundamentals_and_Word_Embedding.md",
+    "Pytorch_Tensor/01_PyTorch Tensor Manipulation and Operations Deep Dive.md",
+    "Pytorch_Tensor",
     "Deep_Learning/14_LSTM_and_GRU_Architecture.md",
     "Deep_Learning/13_RNN_Backpropagation_BPTT_and_Challenges.md",
     "Deep_Learning/12_Sequential_Data_and_Vanilla_RNN.md",
-    "Deep_Learning/15_NLP_Fundamentals_and_Word_Embedding.md",
     "Deep_Learning/11_AutoEncoder Implementations and Applications.md",
     "Deep_Learning/10_Latent Space Properties and AutoEncoder Architecture.md",
     "Deep_Learning/09_AutoEncoder Representation and Dimensionality.md",
@@ -228,7 +230,6 @@
     "Machine_Learning/02_Linear_Regression_and_Gradient_Descent.md.md",
     "Machine_Learning/03_Data_Preprocessing_and_Validation.md.md",
     "Machine_Learning/04_Regularization_Ridge_Lasso.md.md",
-    "Machine_Learning/05_Logistic_Regression_and_Metrics.md.md",
     "Data-Science/Visualization/무제",
     "Data-Science/pandas_library",
     "Data-Science/Visualization",
@@ -237,7 +238,6 @@
     "Data-Science/data_and_analysis_process",
     "Data-Science/theory_and_job_overview",
     "Cheat-Sheets",
-    "Machine_Learning",
     "Pasted image 20260729153834.png",
     "Pasted image 20260729153841.png",
     "Pasted image 20260729153904.png",
