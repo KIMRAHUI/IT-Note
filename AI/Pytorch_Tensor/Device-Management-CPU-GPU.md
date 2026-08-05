@@ -29,7 +29,7 @@ print(t_float.dtype)              # torch.float32
 t_gpu_float = t.to(dtype=torch.float32, device="cuda")
 ```
 
-- 이렇게 dtype과 device를 한 번에 지정하면 코드가 간결해지고, 어떤 상태로 바뀌는지 명시적으로 드러나서 가독성도 좋습니다. **실무에서 가장 권장되는 방식**입니다.
+- 이렇게 dtype과 device를 한 번에 지정하면 코드가 간결해지고, 어떤 상태로 바뀌는지 명시적으로 드러나서 가독성도 좋습니다.
 
 ###### 간편 메서드
 
@@ -67,7 +67,7 @@ result = torch.matmul(a, b.T)  # 정상 작동
 
 #### PyTorch Tensor ⇄ NumPy 배열 변환
 
-딥러닝 파이프라인에서는 데이터 전처리(pandas, NumPy 기반)와 모델 연산(PyTorch 텐서 기반)을 오가는 경우가 매우 흔합니다. 그래서 Tensor ↔ NumPy 변환은 실무에서 정말 자주 쓰입니다.
+딥러닝 파이프라인에서는 데이터 전처리(pandas, NumPy 기반)와 모델 연산(PyTorch 텐서 기반)을 오가는 경우가 매우 흔합니다.
 
 ##### `tensor.numpy()` — 메모리 공유(Shallow)
 
