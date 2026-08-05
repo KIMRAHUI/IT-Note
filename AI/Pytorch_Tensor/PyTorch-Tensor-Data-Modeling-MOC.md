@@ -18,7 +18,7 @@ created: 2026-08-04
 
 #### Part 1. 텐서(Tensor) 다루기
 
-1. [[Tensor-Shape-Interpretation]] — 텐서의 행과 열(Shape) 해석 방법
+1. [Tensor-Shape-Interpretation](./Pytorch_Tensor/Tensor-Shape-Interpretation.md) — 텐서의 행과 열(Shape) 해석 방법
 2. [[Tensor-Attributes-Cheatsheet]] — 텐서 기본 속성 및 메서드 치트시트
 3. [[Tensor-Creation-Functions]] — 특수한 텐서 생성 함수
 4. [[Dtype-Conversion-NumPy-Interop]] — 데이터 타입 변환 및 NumPy 연동
