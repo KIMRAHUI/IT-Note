@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pytorch_Tensor/Training-Loop-and-Optimizer.md",
+                "file": "Pytorch_Tensor/PyTorch-Tensor-Data-Modeling-MOC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Training-Loop-and-Optimizer"
+              "title": "PyTorch-Tensor-Data-Modeling-MOC"
             }
           }
         ]
@@ -171,8 +171,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
             }
           }
         ],
@@ -191,15 +191,12 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false,
-      "templater-obsidian:Templater": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "omnisearch:Omnisearch": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "bases:새 베이스 생성하기": false
     }
   },
   "active": "63c414fc64b3181e",
   "lastOpenFiles": [
+    "Pytorch_Tensor/Training-Loop-and-Optimizer.md",
     "Pytorch_Tensor/Torch-nn-Basics.md",
     "Pytorch_Tensor/Tensor-Shape-Interpretation.md",
     "Pytorch_Tensor/Tensor-Operations-Broadcasting.md",
@@ -216,7 +213,6 @@
     "Pytorch_Tensor/iamge/Pasted image 20260805141841.png",
     "Pytorch_Tensor/iamge",
     "Pytorch_Tensor/References.md",
-    "Pytorch_Tensor/Training-Loop-and-Optimizer.md",
     "Pytorch_Tensor/Torch nn Basics.md",
     "Pytorch_Tensor/Nn module model building.md",
     "Pytorch_Tensor/Pytorch tensor data modeling.md",
