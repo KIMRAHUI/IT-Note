@@ -7722,9 +7722,9 @@ function setsEqual(first, second) {
 }
 /** Normalize a markdown string. Removes all markdown tags and obsidian links. */
 function normalizeMarkdown(str) {
-    // [[test]] -> test
+    // [test](./test.md) -> test
     let interim = str.replace(/\[\[([^\|]*?)\]\]/g, "$1");
-    // [[test|test]] -> test
+    // [test|test](./test|test.md) -> test
     interim = interim.replace(/\[\[.*?\|(.*?)\]\]/, "$1");
     // remove markdown tags
     interim = removeMd(interim);
@@ -9057,7 +9057,7 @@ const EXPRESSION = parsimmon_umd_minExports.createLanguage({
     tag: _ => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("#"), parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/[^\u2000-\u206F\u2E00-\u2E7F'!"#$%&()*+,.:;<=>?@^`{|}~\[\]\\\s]/).desc("text")).many(), (start, rest) => start + rest.join("")).desc("tag ('#hello/stuff')"),
     // A variable identifier, which is alphanumeric and must start with a letter or... emoji.
     identifier: _ => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/\p{Letter}/u), parsimmon_umd_minExports.regexp(EMOJI_REGEX).desc("text")), parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/[0-9\p{Letter}_-]/u), parsimmon_umd_minExports.regexp(EMOJI_REGEX).desc("text")).many(), (first, rest) => first + rest.join("")).desc("variable identifier"),
-    // An Obsidian link of the form [[<link>]].
+    // An Obsidian link of the form [<link>](./<link>.md).
     link: _ => parsimmon_umd_minExports.regexp(/\[\[([^\[\]]*?)\]\]/u, 1)
         .map(linkInner => parseInnerLink(linkInner))
         .desc("file link"),
@@ -9164,7 +9164,7 @@ const EXPRESSION = parsimmon_umd_minExports.createLanguage({
     inlineFieldList: q => q.atomInlineField.sepBy(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace).lookahead(q.atomInlineField)),
     inlineField: q => parsimmon_umd_minExports.alt(parsimmon_umd_minExports.seqMap(q.atomInlineField, parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace), q.inlineFieldList, (f, _s, l) => [f].concat(l)), q.atomInlineField),
     atomField: q => parsimmon_umd_minExports.alt(
-    // Place embed links above negated fields as they are the special parser case '![[thing]]' and are generally unambiguous.
+    // Place embed links above negated fields as they are the special parser case '![thing](./thing.md)' and are generally unambiguous.
     q.embedLink.map(l => Fields.literal(l)), q.negatedField, q.linkField, q.listField, q.objectField, q.lambdaField, q.parensField, q.boolField, q.numberField, q.stringField, q.dateField, q.durationField, q.nullField, q.variableField),
     indexField: q => parsimmon_umd_minExports.seqMap(q.atomField, parsimmon_umd_minExports.alt(q.dotPostfix, q.indexPostfix, q.functionPostfix).many(), (obj, postfixes) => {
         let result = obj;
@@ -12827,7 +12827,7 @@ class FileImporter extends obsidian.Component {
             if (this.callbacks.has(file.path))
                 this.callbacks.get(file.path)?.push([resolve, reject]);
             else
-                this.callbacks.set(file.path, [[resolve, reject]]);
+                this.callbacks.set(file.path, [resolve, reject](./resolve, reject.md));
         });
         // De-bounce repeated requests for the same file.
         if (this.reloadSet.has(file.path))
@@ -18830,7 +18830,7 @@ class DataviewInlineApi {
      *
      * ```
      * dv.evaluate("x + 6", { x: 2 }) = 8
-     * dv.evaluate('link(target)', { target: "Okay" }) = [[Okay]]
+     * dv.evaluate('link(target)', { target: "Okay" }) = [Okay](./Okay.md)
      * ```
      *
      * Note that `this` is implicitly available and refers to the current file.
@@ -19522,7 +19522,7 @@ class DataviewApi {
      *
      * ```
      * dv.evaluate("x + 6", { x: 2 }) = 8
-     * dv.evaluate('link(target)', { target: "Okay" }) = [[Okay]]
+     * dv.evaluate('link(target)', { target: "Okay" }) = [Okay](./Okay.md)
      * ```
      *
      * This method returns a Result type instead of throwing an error; you can check the result of the

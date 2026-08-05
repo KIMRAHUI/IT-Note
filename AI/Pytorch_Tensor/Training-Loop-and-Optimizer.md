@@ -147,7 +147,7 @@ print(loss)
 ```
 
 - 예측값 텐서(`pred`)는 크기가 `(32, 1)`이고, 타깃값 텐서(`y_train`)는 크기가 `(32,)`입니다.
-- 두 텐서의 크기가 다르면 PyTorch가 [[Tensor-Operations-Broadcasting|브로드캐스팅]]을 수행하며, 이로 인해 경고 메시지가 표시됩니다.
+- 두 텐서의 크기가 다르면 PyTorch가 [Tensor-Operations-Broadcasting|브로드캐스팅](./Tensor-Operations-Broadcasting|브로드캐스팅.md)을 수행하며, 이로 인해 경고 메시지가 표시됩니다.
 
 예측값 텐서에서 불필요한 차원을 제거하기 위해 `squeeze()` 메서드를 사용하면 경고가 사라집니다.
 
@@ -162,8 +162,8 @@ print(loss)  # 정상적으로 손실 값이 출력됨, 경고 메시지 없음
 **평균 제곱 오차(MSE) — 직접 확인**
 
 ```python
-inputs = torch.tensor([[2.0, 2.0, 2.0]])
-targets = torch.tensor([[0.0, 0.0, 1.0]])
+inputs = torch.tensor([2.0, 2.0, 2.0](./2.0, 2.0, 2.0.md))
+targets = torch.tensor([0.0, 0.0, 1.0](./0.0, 0.0, 1.0.md))
 
 loss_fn = nn.MSELoss()
 loss = loss_fn(inputs, targets)  # tensor(3.)
@@ -211,7 +211,7 @@ loss = loss_fn(inputs, targets)
 
 ##### Gradient 계산과 Optimizer
 
-Gradient(그래디언트) 계산의 원리(`requires_grad`, `.backward()`, `torch.no_grad()`)는 [[Autograd-Gradient-Computation]] 노트에서 자세히 다룹니다. 여기서는 학습 루프 안에서 실제로 어떻게 쓰이는지 정리합니다.
+Gradient(그래디언트) 계산의 원리(`requires_grad`, `.backward()`, `torch.no_grad()`)는 [Autograd-Gradient-Computation](./Autograd-Gradient-Computation.md) 노트에서 자세히 다룹니다. 여기서는 학습 루프 안에서 실제로 어떻게 쓰이는지 정리합니다.
 
 ###### Optimizer 개념
 
@@ -236,7 +236,7 @@ optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
 ###### Optimizer로 파라미터 업데이트하기
 
 1. **파라미터 업데이트:** Optimizer의 **`step()`** 메서드를 호출하면, 계산된 그래디언트를 바탕으로 모델 파라미터가 업데이트됩니다.
-2. **그래디언트 초기화:** Optimizer의 **`zero_grad()`** 메서드를 호출해 기존 그래디언트를 초기화합니다. PyTorch에서는 그래디언트가 **누적**되므로, 각 배치 처리 후 초기화가 필요합니다. (자세한 이유는 [[Autograd-Gradient-Computation]] 참고)
+2. **그래디언트 초기화:** Optimizer의 **`zero_grad()`** 메서드를 호출해 기존 그래디언트를 초기화합니다. PyTorch에서는 그래디언트가 **누적**되므로, 각 배치 처리 후 초기화가 필요합니다. (자세한 이유는 [Autograd-Gradient-Computation](./Autograd-Gradient-Computation.md) 참고)
 
 ```python
 optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
@@ -388,7 +388,7 @@ plt.show()
 
 - **파란 점:** 모델이 예측한 값과 실제 타깃값의 산점도.
 - **빨간 점선(y = x):** 이상적인 예측 결과를 나타냄.
-- 점들이 점선에 가까울수록 예측이 잘 된 것이며, 특정 구간에서 점들이 점선에서 많이 벗어나 있다면 그 구간에서 과소/과대 예측이 일어나고 있는 것으로 해석할 수 있습니다.  ![[Pasted image 20260805141841.png]]
+- 점들이 점선에 가까울수록 예측이 잘 된 것이며, 특정 구간에서 점들이 점선에서 많이 벗어나 있다면 그 구간에서 과소/과대 예측이 일어나고 있는 것으로 해석할 수 있습니다.  ![Pasted image 20260805141841.png](./Pasted image 20260805141841.png.md)
 
 #### 모델 저장과 불러오기
 
@@ -504,8 +504,8 @@ for epoch in range(epochs):
 
 #### 관련 노트
 
-- [[PyTorch-Tensor-Data-Modeling-MOC]]
-- [[Autograd-Gradient-Computation]]
-- [[nn-Module-Model-Building]]
-- [[Model-Device-Management]]
-- [[Torch-nn-Basics]]
+- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
+- [Autograd-Gradient-Computation](./Autograd-Gradient-Computation.md)
+- [nn-Module-Model-Building](./nn-Module-Model-Building.md)
+- [Model-Device-Management](./Model-Device-Management.md)
+- [Torch-nn-Basics](./Torch-nn-Basics.md)

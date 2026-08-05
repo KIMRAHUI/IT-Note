@@ -55,7 +55,7 @@ t.double()  # torch.float64로 변환
 
 ```python
 a = torch.rand(2, 3)                    # float32
-b = torch.tensor([[1, 2, 3], [4, 5, 6]])  # int64
+b = torch.tensor([1, 2, 3], [4, 5, 6](./1, 2, 3], [4, 5, 6.md))  # int64
 
 # result = torch.matmul(a, b)  → RuntimeError 발생 가능
 
@@ -63,7 +63,7 @@ b = b.to(a.dtype)   # b를 a와 같은 float32로 맞춤
 result = torch.matmul(a, b.T)  # 정상 작동
 ```
 
-- [[Device-Management-CPU-GPU]]에서 다룬 "디바이스 불일치"와 원리가 비슷합니다. **device는 물리적 위치를 맞추는 것, dtype은 데이터 타입을 맞추는 것**이라고 구분해서 기억하면 됩니다.
+- [Device-Management-CPU-GPU](./Device-Management-CPU-GPU.md)에서 다룬 "디바이스 불일치"와 원리가 비슷합니다. **device는 물리적 위치를 맞추는 것, dtype은 데이터 타입을 맞추는 것**이라고 구분해서 기억하면 됩니다.
 
 #### PyTorch Tensor ⇄ NumPy 배열 변환
 
@@ -137,7 +137,7 @@ t_copy = torch.tensor(arr)           # 데이터 복사 (np.array(tensor)의 반
 
 ## 관련 노트
 
-- [[PyTorch-Tensor-Data-Modeling-MOC]]
-- [[Tensor-Attributes-Cheatsheet]]
-- [[Device-Management-CPU-GPU]]
-- [[Tensor-Operations-Broadcasting]]
+- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
+- [Tensor-Attributes-Cheatsheet](./Tensor-Attributes-Cheatsheet.md)
+- [Device-Management-CPU-GPU](./Device-Management-CPU-GPU.md)
+- [Tensor-Operations-Broadcasting](./Tensor-Operations-Broadcasting.md)

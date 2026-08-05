@@ -112,7 +112,7 @@ print(f"=== 모델 파라미터 총 개수: {total_params:,} 개 ===")
 loss_fn = nn.CrossEntropyLoss()
 
 # Logits (예측값 raw score 2개 샘플, 3개 클래스)
-logits = torch.tensor([[2.0, 1.0, 0.1], [0.5, 3.0, 0.2]])
+logits = torch.tensor([2.0, 1.0, 0.1], [0.5, 3.0, 0.2](./2.0, 1.0, 0.1], [0.5, 3.0, 0.2.md))
 # 정답 클래스 인덱스 (첫 번째는 0번 클래스, 두 번째는 1번 클래스가 정답)
 targets = torch.tensor([0, 1])
 

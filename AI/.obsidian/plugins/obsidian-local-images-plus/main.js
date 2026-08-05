@@ -14223,7 +14223,7 @@ class SettingTab extends obsidian.PluginSettingTab {
         })));
         new obsidian.Setting(containerEl)
             .setName("Add original filename or 'Open file' tag")
-            .setDesc("Add [[original filename]] or [original filename](link to attachment) after replaced tag (only for file:// protocol or dropped/pasted files ).")
+            .setDesc("Add [original filename](./original filename.md) or [original filename](link to attachment) after replaced tag (only for file:// protocol or dropped/pasted files ).")
             .addToggle((toggle) => toggle
             .setValue(this.plugin.settings.addNameOfFile)
             .onChange((value) => __awaiter(this, void 0, void 0, function* () {
@@ -15765,7 +15765,7 @@ moment$1.exports;
 	            ),
 	        defaultLocaleMonthsShort =
 	            'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_'),
-	        MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
+	        MONTHS_IN_FORMAT = /D[oD]?(\[^\[\](./^\[\.md)*\]|\s)+MMMM?/,
 	        defaultMonthsShortRegex = matchWord,
 	        defaultMonthsRegex = matchWord;
 
@@ -20447,7 +20447,7 @@ function imageTagProcessor(app, noteFile, settings, defaultdir) {
                             (!settings.useCaptions || !caption.length) ? caption = "" : caption = "\|" + caption;
                             // image size has higher priority
                             (!settings.useCaptions || !imgsize.length) ? caption = "" : caption = "\|" + imgsize;
-                            return [match, `![[${pathWiki}${caption}]]`, `${shortName}`];
+                            return [match, `![${pathWiki}${caption}](./${pathWiki}${caption}.md)`, `${shortName}`];
                         }
                         else {
                             (!settings.useCaptions || !caption.length) ? caption = "" : caption = " " + caption;
@@ -21020,7 +21020,7 @@ class LocalImagesPlugin extends obsidian.Plugin {
                                         addName = `[Open: ${path__default["default"].basename(el.link)}](${newlink[1]})\r\n`;
                                     }
                                     else {
-                                        addName = `[[${newlink[0]}|Open: ${path__default["default"].basename(el.link)}]]\r\n`;
+                                        addName = `[${newlink[0]}|Open: ${path__default["default"].basename(el.link)}](./${newlink[0]}|Open: ${path__default["default"].basename(el.link)}.md)\r\n`;
                                     }
                                 }
                                 let newtag = addName + oldtag.replace(el.link, newlink[0]);

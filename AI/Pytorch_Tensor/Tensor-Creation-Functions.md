@@ -128,8 +128,8 @@ t = torch.rand(2, 3)  # 항상 동일한 값이 나옴
 
 ## 관련 노트
 
-- [[PyTorch-Tensor-Data-Modeling-MOC]]
-- [[Tensor-Shape-Interpretation]]
-- [[Tensor-Operations-Broadcasting]]
+- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
+- [Tensor-Shape-Interpretation](./Tensor-Shape-Interpretation.md)
+- [Tensor-Operations-Broadcasting](./Tensor-Operations-Broadcasting.md)
 
 

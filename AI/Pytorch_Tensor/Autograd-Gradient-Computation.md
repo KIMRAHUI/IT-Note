@@ -165,8 +165,8 @@ print(y2)  # tensor([8.])  ← grad_fn이 없음
 
 #### 관련 노트
 
-- [[PyTorch-Tensor-Data-Modeling-MOC]]
-- [[Tensor-Attributes-Cheatsheet]]
-- [[Training-Loop-and-Optimizer]]
-- [[nn-Module-Model-Building]]
+- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
+- [Tensor-Attributes-Cheatsheet](./Tensor-Attributes-Cheatsheet.md)
+- [Training-Loop-and-Optimizer](./Training-Loop-and-Optimizer.md)
+- [nn-Module-Model-Building](./nn-Module-Model-Building.md)
 

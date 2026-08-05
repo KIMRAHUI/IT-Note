@@ -81,12 +81,12 @@ print(matrix.ndim)  # 2
 
 - 기본적으로 `torch.rand()`, `torch.randn()` 등으로 만든 텐서는 `torch.float32`가 기본값입니다.
 - 정수 텐서는 보통 `torch.int64`(=`torch.long`)가 기본값입니다.
-- 딥러닝 모델 학습 시 두 텐서의 `dtype`이 다르면 연산 중 에러가 나므로 항상 확인하는 습관이 중요합니다. (자세한 내용은 [[Dtype-Conversion-NumPy-Interop]] 참고)
+- 딥러닝 모델 학습 시 두 텐서의 `dtype`이 다르면 연산 중 에러가 나므로 항상 확인하는 습관이 중요합니다. (자세한 내용은 [Dtype-Conversion-NumPy-Interop](./Dtype-Conversion-NumPy-Interop.md) 참고)
 
 #####  `.device` — 연산 장치
 
 - 텐서가 `cpu`에 있는지 `cuda:0`(GPU 0번)에 있는지를 알려줍니다.
-- 서로 다른 device에 있는 텐서끼리 연산하면 에러가 발생합니다. (자세한 내용은 [[Device-Management-CPU-GPU]] 참고)
+- 서로 다른 device에 있는 텐서끼리 연산하면 에러가 발생합니다. (자세한 내용은 [Device-Management-CPU-GPU](./Device-Management-CPU-GPU.md) 참고)
 
 ##### `.requires_grad` — 자동 미분 추적 여부
 
@@ -109,7 +109,7 @@ print(w.grad)  # w에 대한 미분값(기울기)이 출력됨
 
 #### 관련 노트
 
-- [[PyTorch-Tensor-Data-Modeling-MOC]]
-- [[Tensor-Shape-Interpretation]]
-- [[Device-Management-CPU-GPU]]
-- [[Dtype-Conversion-NumPy-Interop]]
+- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
+- [Tensor-Shape-Interpretation](./Tensor-Shape-Interpretation.md)
+- [Device-Management-CPU-GPU](./Device-Management-CPU-GPU.md)
+- [Dtype-Conversion-NumPy-Interop](./Dtype-Conversion-NumPy-Interop.md)

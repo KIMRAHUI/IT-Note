@@ -6,5 +6,6 @@
   "url-into-selection",
   "dataview",
   "obsidian-excalidraw-plugin",
-  "obsidian-image-layouts"
+  "obsidian-image-layouts",
+  "obsidian-linter"
 ]

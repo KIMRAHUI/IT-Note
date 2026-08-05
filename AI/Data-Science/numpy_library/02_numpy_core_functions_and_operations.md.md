@@ -34,7 +34,7 @@ NumPy의 기본 데이터 구조인 `ndarray` 객체를 생성하고 구조적 �
 import numpy as np
 
 # 1) 리스트로부터 배열 생성
-arr = np.array([[1, 2, 3], [4, 5, 6]])
+arr = np.array([1, 2, 3], [4, 5, 6](./1, 2, 3], [4, 5, 6.md))
 print("=== 배열 및 속성 확인 ===")
 print("배열 출력:\n", arr)
 print("Shape (형태):", arr.shape)
@@ -122,8 +122,8 @@ print(np.random.randint(1, 46, size=6))
 
 #### 코드 예시
 ```python
-A = np.array([[1, 2], [3, 4]])
-B = np.array([[5, 6], [7, 8]])
+A = np.array([1, 2], [3, 4](./1, 2], [3, 4.md))
+B = np.array([5, 6], [7, 8](./5, 6], [7, 8.md))
 
 # 1) 요소별 연산 vs 내적 연산
 print("=== 요소별 곱셈 (A * B) ===\n", A * B)
@@ -133,7 +133,7 @@ print("=== 행렬 내적 (A @ B) ===\n", np.dot(A, B))
 print("\n=== A의 전치행렬 (A.T) ===\n", A.T)
 
 # 3) 축(axis) 지정 통계 연산
-arr_stat = np.array([[1, 2, 3], [4, 5, 6]])
+arr_stat = np.array([1, 2, 3], [4, 5, 6](./1, 2, 3], [4, 5, 6.md))
 print("\n=== 통계 연산 (Axis 활용) ===")
 print("전체 합계:", arr_stat.sum())
 print("열 방향 합계 (axis=0):", arr_stat.sum(axis=0)) # 결과: [5, 7, 9]
@@ -162,7 +162,7 @@ print("행 방향 평균 (axis=1):", arr_stat.mean(axis=1)) # 결과: [2., 5.]
 ##### 코드 예시
 ```python
 # 1) 브로드캐스팅 예시
-matrix = np.array([[1, 2, 3], [4, 5, 6]])
+matrix = np.array([1, 2, 3], [4, 5, 6](./1, 2, 3], [4, 5, 6.md))
 vector = np.array([10, 20, 30])
 print("=== 브로드캐스팅 연산 (Matrix + Vector) ===\n", matrix + vector)
 
@@ -177,7 +177,7 @@ data[data < 10] = 100
 print("마스킹 값 변경 후 데이터:", data)
 
 # 3) 선형대수 모듈 (np.linalg)
-A_mat = np.array([[2, 1], [1, 3]])
+A_mat = np.array([2, 1], [1, 3](./2, 1], [1, 3.md))
 b_vec = np.array([5, 10])
 
 inv_A = np.linalg.inv(A_mat)          # 역행렬

@@ -1592,7 +1592,7 @@ class EditorSelectionsBehaviourOverride {
     }
 }
 
-const checkboxRe = `\\[[^\\[\\]]\\][ \t]`;
+const checkboxRe = `\\[^\\[\\](./^\\[\\.md)\\][ \t]`;
 
 function isEmptyLineOrEmptyCheckbox(line) {
     return line === "" || line === "[ ] ";

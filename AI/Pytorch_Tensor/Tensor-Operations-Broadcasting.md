@@ -19,17 +19,17 @@ created: 2026-08-04
 ```python
 import torch
 
-a = torch.tensor([[1, 2], [3, 4]])
-b = torch.tensor([[10, 20], [30, 40]])
+a = torch.tensor([1, 2], [3, 4](./1, 2], [3, 4.md))
+b = torch.tensor([10, 20], [30, 40](./10, 20], [30, 40.md))
 
 print(a + b)
-# tensor([[11, 22], [33, 44]])
+# tensor([11, 22], [33, 44](./11, 22], [33, 44.md))
 
 print(torch.add(a, b))   # a + b와 완전히 동일
-# tensor([[11, 22], [33, 44]])
+# tensor([11, 22], [33, 44](./11, 22], [33, 44.md))
 
 print(a * b)
-# tensor([[10, 40], [90, 160]])   ← 행렬곱이 아니라 같은 위치끼리의 단순 곱셈!
+# tensor([10, 40], [90, 160](./10, 40], [90, 160.md))   ← 행렬곱이 아니라 같은 위치끼리의 단순 곱셈!
 ```
 
 - `a + b`와 `torch.add(a, b)`는 결과가 완전히 동일합니다. 연산자(`+`, `-`, `*`, `/`)는 각각 대응하는 함수(`torch.add`, `torch.sub`, `torch.mul`, `torch.div`)의 축약형이라고 보면 됩니다.
@@ -57,7 +57,7 @@ b = torch.rand(2, 4)   # a의 열(3) ≠ b의 행(2) → 에러
 # RuntimeError: mat1 and mat2 shapes cannot be multiplied (2x3 and 2x4)
 ```
 
-- 이 에러가 나면 [[Tensor-Shape-Interpretation]]에서 다룬 "행/열 해석"을 다시 떠올려서, 두 텐서의 shape를 각각 출력해보고 어느 쪽을 전치(transpose, `.T`)해야 하는지 확인하는 것이 첫 번째 디버깅 순서입니다.
+- 이 에러가 나면 [Tensor-Shape-Interpretation](./Tensor-Shape-Interpretation.md)에서 다룬 "행/열 해석"을 다시 떠올려서, 두 텐서의 shape를 각각 출력해보고 어느 쪽을 전치(transpose, `.T`)해야 하는지 확인하는 것이 첫 번째 디버깅 순서입니다.
 
 #### 브로드캐스팅(Broadcasting) 원리
 
@@ -99,7 +99,7 @@ print(a + b)
 ```
 
 - 뒤쪽 차원부터 비교: `a`의 마지막 차원 `3`과 `b`의 마지막 차원 `3`이 같으므로 브로드캐스팅이 가능합니다.
-- `b`가 마치 `[[10, 20, 30], [10, 20, 30]]`처럼 행 방향으로 복제된 것처럼 동작하여 `a`의 각 행에 더해집니다.
+- `b`가 마치 `[10, 20, 30], [10, 20, 30](./10, 20, 30], [10, 20, 30.md)`처럼 행 방향으로 복제된 것처럼 동작하여 `a`의 각 행에 더해집니다.
 
 ##### 예시 3: 브로드캐스팅이 불가능한 경우
 
@@ -132,8 +132,8 @@ b = torch.rand(2, 4)   # shape: (2, 4)
 
 ## 관련 노트
 
-- [[PyTorch-Tensor-Data-Modeling-MOC]]
-- [[Tensor-Creation-Functions]]
-- [[Tensor-Shape-Interpretation]]
-- [[Dtype-Conversion-NumPy-Interop]]
+- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
+- [Tensor-Creation-Functions](./Tensor-Creation-Functions.md)
+- [Tensor-Shape-Interpretation](./Tensor-Shape-Interpretation.md)
+- [Dtype-Conversion-NumPy-Interop](./Dtype-Conversion-NumPy-Interop.md)
 

@@ -99,7 +99,7 @@ loss_ce = nn.CrossEntropyLoss()
 ```
 
 - 딥러닝에서 자주 쓰는 손실 함수도 `nn` 모듈에서 객체 형태로 바로 사용할 수 있습니다.
-- 자세한 손실 함수 종류와 사용법은 [[Training-Loop-and-Optimizer]] 노트에서 다룹니다.
+- 자세한 손실 함수 종류와 사용법은 [Training-Loop-and-Optimizer](./Training-Loop-and-Optimizer.md) 노트에서 다룹니다.
 
 #### 텐서의 차원 vs 레이어의 입출력 차원
 
@@ -112,8 +112,8 @@ loss_ce = nn.CrossEntropyLoss()
 ```python
 tensor_0d = torch.tensor(5)                      # 스칼라
 tensor_1d = torch.tensor([1, 2, 3])               # 벡터
-tensor_2d = torch.tensor([[1, 2], [3, 4]])         # 행렬
-tensor_3d = torch.tensor([[[1], [2]], [[3], [4]]]) # 3차원 텐서
+tensor_2d = torch.tensor([1, 2], [3, 4](./1, 2], [3, 4.md))         # 행렬
+tensor_3d = torch.tensor([[1], [2](./[1], [2.md), [3], [4](./3], [4.md)]) # 3차원 텐서
 
 print(f'0차원 텐서 차원: {tensor_0d.ndim}, size: {tensor_0d.size()}')
 print(f'1차원 텐서 차원: {tensor_1d.ndim}, size: {tensor_1d.size()}')
@@ -160,7 +160,7 @@ print(f'출력 텐서 차원: {y.ndim}, size: {y.size()}')  # 2, [1, 4]
 
 #### 관련 노트
 
-- [[PyTorch-Tensor-Data-Modeling-MOC]]
-- [[nn-Module-Model-Building]]
-- [[Training-Loop-and-Optimizer]]
-- [[Autograd-Gradient-Computation]]
+- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
+- [nn-Module-Model-Building](./nn-Module-Model-Building.md)
+- [Training-Loop-and-Optimizer](./Training-Loop-and-Optimizer.md)
+- [Autograd-Gradient-Computation](./Autograd-Gradient-Computation.md)
