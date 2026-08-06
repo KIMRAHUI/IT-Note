@@ -73,7 +73,7 @@ print(t3.shape)  # torch.Size([4, 2, 3])
 
 #### 관련 노트
 
-- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
-- [Tensor-Attributes-Cheatsheet](./Tensor-Attributes-Cheatsheet.md)
-- [Tensor-Creation-Functions](./Tensor-Creation-Functions.md)
-- [Tensor-Operations-Broadcasting](./Tensor-Operations-Broadcasting.md)
+- [PyTorch-Tensor-Data-Modeling-MOC](PyTorch-Tensor-Data-Modeling-MOC.md)
+- [Tensor-Attributes-Cheatsheet](Tensor-Attributes-Cheatsheet.md)
+- [Tensor-Creation-Functions](Tensor-Creation-Functions.md)
+- [Tensor-Operations-Broadcasting](Tensor-Operations-Broadcasting.md)

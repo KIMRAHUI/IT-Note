@@ -211,7 +211,7 @@ loss = loss_fn(inputs, targets)
 
 #### Gradient 계산과 Optimizer
 
-Gradient(그래디언트) 계산의 원리(`requires_grad`, `.backward()`, `torch.no_grad()`)는 [Autograd-Gradient-Computation](./Autograd-Gradient-Computation.md) 노트에서 자세히 다룹니다. 여기서는 학습 루프 안에서 실제로 어떻게 쓰이는지 정리합니다.
+Gradient(그래디언트) 계산의 원리(`requires_grad`, `.backward()`, `torch.no_grad()`)는 [Autograd-Gradient-Computation](Autograd-Gradient-Computation.md) 노트에서 자세히 다룹니다. 여기서는 학습 루프 안에서 실제로 어떻게 쓰이는지 정리합니다.
 
 #### Optimizer 개념
 
@@ -236,7 +236,7 @@ optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
 #### Optimizer로 파라미터 업데이트하기
 
 1. **파라미터 업데이트:** Optimizer의 **`step()`** 메서드를 호출하면, 계산된 그래디언트를 바탕으로 모델 파라미터가 업데이트됩니다.
-2. **그래디언트 초기화:** Optimizer의 **`zero_grad()`** 메서드를 호출해 기존 그래디언트를 초기화합니다. PyTorch에서는 그래디언트가 **누적**되므로, 각 배치 처리 후 초기화가 필요합니다. (자세한 이유는 [Autograd-Gradient-Computation](./Autograd-Gradient-Computation.md) 참고)
+2. **그래디언트 초기화:** Optimizer의 **`zero_grad()`** 메서드를 호출해 기존 그래디언트를 초기화합니다. PyTorch에서는 그래디언트가 **누적**되므로, 각 배치 처리 후 초기화가 필요합니다. (자세한 이유는 [Autograd-Gradient-Computation](Autograd-Gradient-Computation.md) 참고)
 
 ```python
 optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
@@ -390,7 +390,7 @@ plt.show()
 - **빨간 점선(y = x):** 이상적인 예측 결과를 나타냄.
 - 점들이 점선에 가까울수록 예측이 잘 된 것이며, 특정 구간에서 점들이 점선에서 많이 벗어나 있다면 그 구간에서 과소/과대 예측이 일어나고 있는 것으로 해석할 수 있습니다.
 
-![Predicted vs True Values](image/Pasted%20image%2020260805141841.png)
+![Predicted vs True Values](Pasted%20image%2020260805141841.png)
 
 #### 모델 저장과 불러오기
 
@@ -506,8 +506,8 @@ for epoch in range(epochs):
 
 ## 관련 노트
 
-- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
-- [Autograd-Gradient-Computation](./Autograd-Gradient-Computation.md)
-- [nn-Module-Model-Building](./nn-Module-Model-Building.md)
-- [Model-Device-Management](./Model-Device-Management.md)
-- [Torch-nn-Basics](./Torch-nn-Basics.md)
+- [PyTorch-Tensor-Data-Modeling-MOC](PyTorch-Tensor-Data-Modeling-MOC.md)
+- [Autograd-Gradient-Computation](Autograd-Gradient-Computation.md)
+- [nn-Module-Model-Building](nn-Module-Model-Building.md)
+- [Model-Device-Management](Model-Device-Management.md)
+- [Torch-nn-Basics](Torch-nn-Basics.md)

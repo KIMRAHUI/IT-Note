@@ -377,7 +377,7 @@ ReLU()
 
 ## 관련 노트
 
-- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
-- [Torch-nn-Basics](./Torch-nn-Basics.md)
-- [Model-Device-Management](./Model-Device-Management.md)
-- [Training-Loop-and-Optimizer](./Training-Loop-and-Optimizer.md)
+- [PyTorch-Tensor-Data-Modeling-MOC](PyTorch-Tensor-Data-Modeling-MOC.md)
+- [Torch-nn-Basics](Torch-nn-Basics.md)
+- [Model-Device-Management](Model-Device-Management.md)
+- [Training-Loop-and-Optimizer](Training-Loop-and-Optimizer.md)

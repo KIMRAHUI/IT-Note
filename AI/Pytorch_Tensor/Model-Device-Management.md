@@ -13,7 +13,7 @@ created: 2026-08-04
 ---
 
 #### 개요
-[Device-Management-CPU-GPU](./Device-Management-CPU-GPU.md) 노트에서 **텐서**의 연산 장치를 어떻게 지정하는지 배웠습니다. 이 노트에서는 **모델(nn.Module)** 자체의 연산 장치를 어떻게 다루는지 정리합니다.
+[Device-Management-CPU-GPU](Device-Management-CPU-GPU.md) 노트에서 **텐서**의 연산 장치를 어떻게 지정하는지 배웠습니다. 이 노트에서는 **모델(nn.Module)** 자체의 연산 장치를 어떻게 다루는지 정리합니다.
 
 #### PyTorch에서 기본 장치는 CPU
 
@@ -105,7 +105,7 @@ for name, param in model.named_parameters():
     print(f'{name}: {param.device}')  # cuda:0
 ```
 
-- `.to("cuda")`와 `.cuda()`는 결과가 동일합니다. 다만 `.to(device)` 방식이 device 변수 하나로 CPU/GPU를 자동 전환할 수 있어 더 권장됩니다. (자세한 이유는 [Device-Management-CPU-GPU](./Device-Management-CPU-GPU.md) 참고)
+- `.to("cuda")`와 `.cuda()`는 결과가 동일합니다. 다만 `.to(device)` 방식이 device 변수 하나로 CPU/GPU를 자동 전환할 수 있어 더 권장됩니다. (자세한 이유는 [Device-Management-CPU-GPU](Device-Management-CPU-GPU.md) 참고)
 
 #### 텐서의 연산 장치와 모델의 연산 장치가 일치해야 하는 이유
 
@@ -119,7 +119,7 @@ tensor_cpu = torch.randn(2, 8)
 model(tensor_cpu)  # 에러 발생!
 ```
 
-모델 파라미터 텐서는 GPU에 있는 반면, 모델에 입력된 텐서는 CPU에 있어서 텐서 간 연산이 불가능하다는 에러가 발생합니다. (에러 메시지는 [Device-Management-CPU-GPU](./Device-Management-CPU-GPU.md)에서 다룬 디바이스 불일치 에러와 동일한 원리입니다.)
+모델 파라미터 텐서는 GPU에 있는 반면, 모델에 입력된 텐서는 CPU에 있어서 텐서 간 연산이 불가능하다는 에러가 발생합니다. (에러 메시지는 [Device-Management-CPU-GPU](Device-Management-CPU-GPU.md)에서 다룬 디바이스 불일치 에러와 동일한 원리입니다.)
 
 #### 해결: 입력 텐서도 같은 장치로 옮기기
 
@@ -156,7 +156,7 @@ for x_batch, y_batch in dataloader:
     ...
 ```
 
-자세한 학습 루프 패턴은 [Training-Loop-and-Optimizer](./Training-Loop-and-Optimizer.md) 노트를 참고하세요.
+자세한 학습 루프 패턴은 [Training-Loop-and-Optimizer](Training-Loop-and-Optimizer.md) 노트를 참고하세요.
 
 #### 자주 하는 실수
 
@@ -168,7 +168,7 @@ for x_batch, y_batch in dataloader:
 
 #### 관련 노트
 
-- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
-- [Device-Management-CPU-GPU](./Device-Management-CPU-GPU.md)
-- [nn-Module-Model-Building](./nn-Module-Model-Building.md)
-- [Training-Loop-and-Optimizer](./Training-Loop-and-Optimizer.md)
+- [PyTorch-Tensor-Data-Modeling-MOC](PyTorch-Tensor-Data-Modeling-MOC.md)
+- [Device-Management-CPU-GPU](Device-Management-CPU-GPU.md)
+- [nn-Module-Model-Building](nn-Module-Model-Building.md)
+- [Training-Loop-and-Optimizer](Training-Loop-and-Optimizer.md)

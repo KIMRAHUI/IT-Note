@@ -57,7 +57,7 @@ b = torch.rand(2, 4)   # a의 열(3) ≠ b의 행(2) → 에러
 # RuntimeError: mat1 and mat2 shapes cannot be multiplied (2x3 and 2x4)
 ```
 
-- 이 에러가 나면 [Tensor-Shape-Interpretation](./Tensor-Shape-Interpretation.md)에서 다룬 "행/열 해석"을 다시 떠올려서, 두 텐서의 shape를 각각 출력해보고 어느 쪽을 전치(transpose, `.T`)해야 하는지 확인하는 것이 첫 번째 디버깅 순서입니다.
+- 이 에러가 나면 [Tensor-Shape-Interpretation](Tensor-Shape-Interpretation.md)에서 다룬 "행/열 해석"을 다시 떠올려서, 두 텐서의 shape를 각각 출력해보고 어느 쪽을 전치(transpose, `.T`)해야 하는지 확인하는 것이 첫 번째 디버깅 순서입니다.
 
 #### 브로드캐스팅(Broadcasting) 원리
 
@@ -132,8 +132,8 @@ b = torch.rand(2, 4)   # shape: (2, 4)
 
 ## 관련 노트
 
-- [PyTorch-Tensor-Data-Modeling-MOC](./PyTorch-Tensor-Data-Modeling-MOC.md)
-- [Tensor-Creation-Functions](./Tensor-Creation-Functions.md)
-- [Tensor-Shape-Interpretation](./Tensor-Shape-Interpretation.md)
-- [Dtype-Conversion-NumPy-Interop](./Dtype-Conversion-NumPy-Interop.md)
+- [PyTorch-Tensor-Data-Modeling-MOC](PyTorch-Tensor-Data-Modeling-MOC.md)
+- [Tensor-Creation-Functions](Tensor-Creation-Functions.md)
+- [Tensor-Shape-Interpretation](Tensor-Shape-Interpretation.md)
+- [Dtype-Conversion-NumPy-Interop](Dtype-Conversion-NumPy-Interop.md)
 
