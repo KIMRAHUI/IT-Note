@@ -235,6 +235,6 @@ fig.show()
 - **[torch.optim.Adam](https://docs.pytorch.org/docs/stable/generated/torch.optim.Adam.html)** 
 - **[torch.nn.MSELoss](https://docs.pytorch.org/docs/stable/generated/torch.nn.MSELoss.html)** 
 - **[Plotly Scatter3d](https://plotly.com/python/3d-scatter-plots/)** 
--
+
 
 
