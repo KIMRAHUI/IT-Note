@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RNN/Recurrent Neural Networks for Time Series.md",
+                "file": "Autoencoder/FashionMNIST 3D Autoencoder & Latent Space Visualization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Recurrent Neural Networks for Time Series"
+              "title": "FashionMNIST 3D Autoencoder & Latent Space Visualization"
             }
           }
         ]
@@ -196,9 +196,18 @@
   },
   "active": "f844930301af057e",
   "lastOpenFiles": [
-    "RNN/RNN & NLP.md",
-    "RNN/Recurrent Neural Networks for Time Series.md",
     "Autoencoder/CNN Autoencoder.md",
+    "Cheat-Sheets/RNN Architecture & PyTorch NLP Operations.md",
+    "Cheat-Sheets/Model_Evaluation_Summary.md",
+    "Cheat-Sheets/Deep Learning Hyperparameters & PyTorch Tensors.md",
+    "ComputerVision/01_Computer-Vision-History-and-Milestones.md",
+    "ComputerVision/02_Computer-Vision-Applications.md",
+    "ComputerVision/03_Image-Data-Fundamentals.md",
+    "ComputerVision/04_Image-Processing-and-Augmentation.md",
+    "RNN/Recurrent Neural Networks for Time Series.md",
+    "ComputerVision",
+    "무제.md",
+    "RNN/RNN & NLP.md",
     "Autoencoder/FashionMNIST 3D Autoencoder & Latent Space Visualization.md",
     "RNN/RNN_Layer.md",
     "RNN",
@@ -219,22 +228,13 @@
     "Pytorch_Tensor/Tensor-Attributes-Cheatsheet.md",
     "Pytorch_Tensor/PyTorch Tensor Manipulation and Operations Deep Dive.md",
     "Pytorch_Tensor/nn-Module-Model-Building.md",
-    "Pytorch_Tensor/Model-Device-Management.md",
-    "Pytorch_Tensor/In-place-Methods-and-Functional.md",
-    "Pytorch_Tensor/Dtype-Conversion-NumPy-Interop.md",
-    "Pytorch_Tensor/Device-Management-CPU-GPU.md",
-    "Pytorch_Tensor/Autograd-Gradient-Computation.md",
     "Pytorch_Tensor/iamge/Pasted image 20260805141841.png",
     "Pytorch_Tensor/iamge",
-    "Pytorch_Tensor/References.md",
-    "Pytorch_Tensor/Torch nn Basics.md",
-    "Pytorch_Tensor/Nn module model building.md",
     "무제.base",
     "Pytorch_Tensor",
     "무제.canvas",
     "Data-Science/Visualization/무제",
     "Data-Science/pandas_library",
-    "Data-Science/Visualization",
     "Pasted image 20260729153834.png",
     "Pasted image 20260729153841.png",
     "Pasted image 20260729153904.png",
