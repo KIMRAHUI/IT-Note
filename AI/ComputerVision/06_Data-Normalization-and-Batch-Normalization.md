@@ -32,8 +32,8 @@ created: 2026-08-19
 3. **수식 및 PyTorch 전처리 코드**
     
     - **정규화 수식:**
-      $$x' = \frac{x - \mu}{\sigma}$$
-      *(여기서 $\mu$와 $\sigma$는 각각 R, G, B 채널의 평균과 표준편차를 의미합니다.)*
+      `x' = (x - μ) / σ`
+      *(여기서 μ와 σ는 각각 R, G, B 채널의 평균과 표준편차를 의미합니다.)*
     - **PyTorch `torchvision.transforms` 파이프라인 구현:**
       ```python
       from torchvision import transforms
