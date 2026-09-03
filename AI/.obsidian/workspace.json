@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerVision/YOLO/06_참고_ultralytics_YOLO.md",
+                "file": "ComputerVision/Segmentation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06_참고_ultralytics_YOLO"
+              "title": "Segmentation"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#RNN",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -194,13 +194,16 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "3b8fb273baebfe53",
+  "active": "806a4f76f18d57d5",
   "lastOpenFiles": [
-    "ComputerVision/YOLO/05_YOLOv3.md",
-    "ComputerVision/YOLO/04_YOLOv2.md",
-    "ComputerVision/YOLO/03_YOLOv1.md",
-    "ComputerVision/YOLO/02_SSD.md",
+    "ComputerVision/01_Computer-Vision-History-and-Milestones.md",
+    "ComputerVision/Segmentation.md",
+    "ComputerVision/무제",
     "ComputerVision/YOLO/00_Object-Detection-MOC.md",
+    "ComputerVision/YOLO/02_SSD.md",
+    "ComputerVision/YOLO/03_YOLOv1.md",
+    "ComputerVision/YOLO/04_YOLOv2.md",
+    "ComputerVision/YOLO/05_YOLOv3.md",
     "ComputerVision/YOLO/06_참고_ultralytics_YOLO.md",
     "ComputerVision/08_Object detection_part2.md",
     "ComputerVision/YOLO",
@@ -213,7 +216,6 @@
     "ComputerVision/04_Image-Processing-and-Augmentation.md",
     "ComputerVision/03_Image-Data-Fundamentals.md",
     "ComputerVision/02_Computer-Vision-Applications.md",
-    "ComputerVision/01_Computer-Vision-History-and-Milestones.md",
     "Cheat-Sheets/RNN Architecture & PyTorch NLP Operations.md",
     "Cheat-Sheets/Deep Learning Hyperparameters & PyTorch Tensors.md",
     "RNN/RNN_Layer.md",
@@ -222,7 +224,6 @@
     "CNN/CNN-Image-Classification-Guide.md",
     "Pytorch_Tensor/Training-Loop-and-Optimizer.md",
     "Pytorch_Tensor/Torch-nn-Basics.md",
-    "Pytorch_Tensor/Tensor-Shape-Interpretation.md",
     "Image Classification",
     "ComputerVision",
     "RNN",
@@ -233,7 +234,6 @@
     "Pytorch_Tensor/iamge/Pasted image 20260805141841.png",
     "Pytorch_Tensor/iamge",
     "무제.base",
-    "Pytorch_Tensor",
     "무제.canvas",
     "Pasted image 20260729153834.png",
     "Pasted image 20260729153841.png",
